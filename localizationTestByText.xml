@@ -1,0 +1,10 @@
+<suite name="Default_test_suite">
+    <parameter name="uaWord" value="український бренд"></parameter>
+    <parameter name="ruWord" value="украинский бренд"></parameter>
+    <parameter name="enWord" value="ukrainian brand"></parameter>
+    <test name="Default_test">
+        <classes>
+            <class name="test.java.tests.LocalizationByText"></class>
+        </classes>
+    </test>
+</suite>
