@@ -2,12 +2,10 @@ package test.java.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.testng.annotations.Optional;
 import test.java.utils.PropertyLoader;
 
-public class HomePage extends BasePage {
+public class StartPage extends BasePage {
 
     WebDriver driver;
 
@@ -17,39 +15,36 @@ public class HomePage extends BasePage {
     By enLangBtnBy = By.xpath("//li[contains(text(),'English')]");
     By langBottomTextBy = By.xpath("//div[@class='text_left']");
 
-
-    public HomePage(WebDriver driver) {
+    public StartPage(WebDriver driver) {
         super(driver);
         this.driver = driver;
     }
 
     @Override
-    public HomePage open() {
+    public StartPage open() {
         driver.get(PropertyLoader.loadProperty("baseURL"));
         wait.until(ExpectedConditions.visibilityOfElementLocated(langSelectElementBy));
         return this;
     }
 
-    public HomePage selectUaLangVersion() {
+    public StartPage selectUaLangVersion() {
         driver.findElement(uaLangBtnBy).click();
         return this;
     }
 
-    public HomePage selectRuLangVersion() {
+    public StartPage selectRuLangVersion() {
         driver.findElement(ruLangBtnBy).click();
         return this;
     }
 
-    public HomePage selectEnLangVersion() {
+    public StartPage selectEnLangVersion() {
         driver.findElement(enLangBtnBy).click();
         return this;
     }
-
 
     public String findBottomText() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(langBottomTextBy));
         String langBottomText = driver.findElement(langBottomTextBy).getText().toLowerCase();
         return langBottomText;
     }
-
 }

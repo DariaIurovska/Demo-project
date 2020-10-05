@@ -1,0 +1,7 @@
+<suite name="LocalizationByStateOfWebElements_test_suite">
+    <test name="By_stateOfLangHeader_test">
+        <classes>
+            <class name="test.java.tests.LocalizationByStatusOfWebElements"></class>
+        </classes>
+    </test>
+</suite>

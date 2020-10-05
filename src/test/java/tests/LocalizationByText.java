@@ -4,46 +4,42 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import test.java.pages.HomePage;
+import test.java.pages.StartPage;
+import test.java.pages.UaHomePage;
 
 public class LocalizationByText extends TestBaseSetUp {
 
-    HomePage homePage;
+    StartPage startPage;
 
     @BeforeMethod
-
     public void pageFactory() {
-
-        homePage = new HomePage(driver);
+        startPage = new StartPage(driver);
     }
 
     @Parameters({"uaWord"})
     @Test
-
     public void testUaLangByText(@Optional("ї") String uaWord) {
-        homePage.open();
-        homePage.selectUaLangVersion();
-        String uaLangBottomText = homePage.findBottomText();
+        startPage.open();
+        startPage.selectUaLangVersion();
+        String uaLangBottomText = startPage.findBottomText();
         assert (uaLangBottomText.contains(uaWord));
     }
 
     @Parameters({"ruWord"})
     @Test
-
     public void testRuLangByText(@Optional("ы") String ruWord) {
-        homePage.open();
-        homePage.selectRuLangVersion();
-        String ruLangBottomText = homePage.findBottomText();
+        startPage.open();
+        startPage.selectRuLangVersion();
+        String ruLangBottomText = startPage.findBottomText();
         assert (ruLangBottomText.contains(ruWord));
     }
 
     @Parameters({"enWord"})
     @Test
-
     public void testEnLangByText(@Optional("w") String enWord) {
-        homePage.open();
-        homePage.selectEnLangVersion();
-        String enLangBottomText = homePage.findBottomText();
+        startPage.open();
+        startPage.selectEnLangVersion();
+        String enLangBottomText = startPage.findBottomText();
         assert (enLangBottomText.contains(enWord));
     }
 }
