@@ -1,4 +1,5 @@
 # PET-project
+
 This project was created with the purpose to demonstrate how I am proficient in technologies and automated testing tools.
  
  The goal of the project is to test several typical user scenarios on the site of the online clothing store https://cabanchi.com/.
@@ -9,4 +10,4 @@ This project was created with the purpose to demonstrate how I am proficient in 
 
 1. localizationTestByText.xml
 
-2. localizationTestByStateOfWebElements.xml
+2. localizationTestByStatusOfWebElements.xml
