@@ -2,3 +2,7 @@
 target/
 *.iml
 chromedriver
+
+
+# Mac OS specific files
+.DS_Store

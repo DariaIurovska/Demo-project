@@ -2,6 +2,7 @@ package test.java.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import test.java.utils.PropertyLoader;
 
@@ -22,9 +23,8 @@ public class EnHomePage extends BasePage{
         return this;
     }
 
-    public String findEnLangHeaderActiveText() {
+    public WebElement findLangHeaderActiveText() {
         wait.until(ExpectedConditions.elementToBeClickable(langHeaderBy));
-        String langHeaderActiveText = driver.findElement(enActiveLangBtnBy).getAttribute("innerHTML").toLowerCase();
-        return langHeaderActiveText;
+        return driver.findElement(enActiveLangBtnBy);
     }
 }

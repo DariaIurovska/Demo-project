@@ -1,0 +1,8 @@
+
+<suite name="LocalizationByStateOfWebElements_test_suite">
+    <test name="By_stateOfLangHeader_test">
+        <classes>
+            <class name="test.java.tests.LocalizationByColorOfWebElements"></class>
+        </classes>
+    </test>
+</suite>

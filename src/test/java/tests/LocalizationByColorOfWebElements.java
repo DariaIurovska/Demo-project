@@ -1,6 +1,5 @@
 package test.java.tests;
 
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import test.java.pages.EnHomePage;
@@ -10,7 +9,7 @@ import test.java.pages.UaHomePage;
 
 import static org.testng.Assert.assertEquals;
 
-public class LocalizationByStatusOfWebElements extends TestBaseSetUp {
+public class LocalizationByColorOfWebElements extends TestBaseSetUp {
 
     StartPage startPage;
     UaHomePage uaHomePage;
@@ -18,7 +17,6 @@ public class LocalizationByStatusOfWebElements extends TestBaseSetUp {
     EnHomePage enHomePage;
 
     @BeforeMethod
-
     public void pageFactory() {
         startPage = new StartPage(driver);
         uaHomePage = new UaHomePage(driver);
@@ -27,32 +25,33 @@ public class LocalizationByStatusOfWebElements extends TestBaseSetUp {
     }
 
     @Test
-    public void testUaLangByStatusOfLangHeader() {
-
+    public void testUaLangByColorOfLangHeader() {
         startPage.open();
         startPage.selectUaLangVersion();
-        String langHeaderActiveText = uaHomePage.findLangHeaderActiveText().getAttribute("innerHTML").toLowerCase();
-        assertEquals(langHeaderActiveText, "ukr");
+        String actualTextColor = uaHomePage.findLangHeaderActiveText().getCssValue("color");
+        String expectedTextColor = "rgba(255, 255, 255, 1)";
+        assertEquals(actualTextColor, expectedTextColor);
+
     }
 
     @Test
-    public void testRuLangByStatusOfLangHeader() {
-
+    public void testRuLangByColorOfLangHeader() {
         startPage.open();
         startPage.selectRuLangVersion();
-        String langHeaderActiveText = ruHomePage.findLangHeaderActiveText().getAttribute("innerHTML").toLowerCase();
-        assertEquals(langHeaderActiveText, "ru");
+        String actualTextColor = ruHomePage.findLangHeaderActiveText().getCssValue("color");
+        String expectedTextColor = "rgba(255, 255, 255, 1)";
+        assertEquals(actualTextColor, expectedTextColor);
 
     }
-
 
     @Test
-    public void testEnLangByStatusOfLangHeader() {
+    public void testEnLangByColorOfLangHeader() {
         startPage.open();
         startPage.selectEnLangVersion();
-        String langHeaderActiveText = enHomePage.findLangHeaderActiveText().getAttribute("innerHTML").toLowerCase();
-        assertEquals(langHeaderActiveText, "en");
-    }
+        String actualTextColor = enHomePage.findLangHeaderActiveText().getCssValue("color");
+        String expectedTextColor = "rgba(255, 255, 255, 1)";
+        assertEquals(actualTextColor, expectedTextColor);
 
+    }
 
 }
