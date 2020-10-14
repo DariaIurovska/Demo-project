@@ -1,0 +1,7 @@
+<suite name="RuPageMenuSelectionMatchesSelectPageTitle_testSuite">
+<test name="StaticGoodsMenu_test">
+    <classes>
+        <class name="test.java.tests.RuPageMenuSelectionMatchesSelectPageTitleTest"></class>
+    </classes>
+</test>
+</suite>

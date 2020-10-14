@@ -13,3 +13,5 @@ I've created this project with the purpose to demonstrate how I am proficient in
 2. localizationTestByStatusOfWebElements.xml
 
 3. localizationTestByColorOfWebElements.xml
+
+4. ruPageMenuSelectionMatchesSelectPageTitleTest.xml

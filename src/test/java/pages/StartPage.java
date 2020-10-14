@@ -44,7 +44,6 @@ public class StartPage extends BasePage {
 
     public String findBottomText() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(langBottomTextBy));
-        String langBottomText = driver.findElement(langBottomTextBy).getText().toLowerCase();
-        return langBottomText;
+        return driver.findElement(langBottomTextBy).getText().toLowerCase();
     }
 }

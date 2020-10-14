@@ -11,7 +11,7 @@ public class UaHomePage extends BasePage {
     WebDriver driver;
 
     By langHeaderBy = By.xpath("//div[@class='lang_container_header']");
-    By uaRuActiveLangBtnBy = By.xpath("//a[@class=' newlang active']");
+    By uaActiveLangBtnBy = By.xpath("//a[@class=' newlang active']");
 
     public UaHomePage(WebDriver driver) {
         super(driver);
@@ -26,7 +26,7 @@ public class UaHomePage extends BasePage {
 
     public WebElement findLangHeaderActiveText() {
         wait.until(ExpectedConditions.elementToBeClickable(langHeaderBy));
-        return driver.findElement(uaRuActiveLangBtnBy);
+        return driver.findElement(uaActiveLangBtnBy);
     }
 
 }
