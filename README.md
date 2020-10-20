@@ -14,4 +14,4 @@ I've created this project with the purpose to demonstrate how I am proficient in
 
 3. localizationTestByColorOfWebElements.xml
 
-4. ruPageMenuSelectionMatchesSelectPageTitleTest.xml
+4. pageMenuSelectionMatchesSelectPageTitleTest.xml

@@ -3,29 +3,29 @@ package test.java.tests;
 import org.openqa.selenium.By;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Optional;
 import org.testng.annotations.Test;
-import test.java.pages.*;
+import test.java.pages.StartPage;
+import test.java.pages.UaHomePage;
 
-public class RuPageMenuSelectionMatchesSelectPageTitleTest extends TestBaseSetUp {
+public class UaPageMenuSelectionMatchesSelectPageTitleTest extends TestBaseSetUp {
 
     StartPage startPage;
-    RuHomePage ruHomePage;
+    UaHomePage uaHomePage;
 
-    String sampleForSubMenuBtnLocator = "a[href='/catalog/*/']";
-    String sampleForPageTitleLocator = "//span/a[@href='/catalog/*/']";
+    String sampleForSubMenuBtnLocator = "a[href='/uk/catalog/*/']";
+    String sampleForPageTitleLocator = "//span/a[@href='/uk/catalog/*/']";
 
     @BeforeMethod
     public void pageFactory() {
         startPage = new StartPage(driver);
-        ruHomePage = new RuHomePage(driver);
+        uaHomePage = new UaHomePage(driver);
     }
 
     @Test(dataProvider = "subMenuGoodsStaticName")
-    public void ruMenuGoodsStaticNameSelectMatchesPage(String subMenuNameAtLink) {
+    public void uaMenuGoodsStaticNameSelectMatchesPage(String subMenuNameAtLink) {
         startPage.open();
-        startPage.selectRuLangVersion();
-        ruHomePage.selectMainMenu();
+        startPage.selectUaLangVersion();
+        uaHomePage.selectMainMenu();
         String subMenuBtnLocator = sampleForSubMenuBtnLocator
                 .replace("*", subMenuNameAtLink);
         String subMenuName = driver.findElement(By.cssSelector(subMenuBtnLocator)).getText().toLowerCase();

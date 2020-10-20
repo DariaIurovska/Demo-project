@@ -12,6 +12,7 @@ public class UaHomePage extends BasePage {
 
     By langHeaderBy = By.xpath("//div[@class='lang_container_header']");
     By uaActiveLangBtnBy = By.xpath("//a[@class=' newlang active']");
+    By mainMenuBtnBy = By.xpath("//img[@class='sb-toggle-left menu_ico']");
 
     public UaHomePage(WebDriver driver) {
         super(driver);
@@ -29,4 +30,9 @@ public class UaHomePage extends BasePage {
         return driver.findElement(uaActiveLangBtnBy);
     }
 
+    public UaHomePage selectMainMenu() {
+        wait.until(ExpectedConditions.elementToBeClickable(mainMenuBtnBy));
+        driver.findElement(mainMenuBtnBy).click();
+        return this;
+    }
 }

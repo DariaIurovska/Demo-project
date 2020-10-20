@@ -18,7 +18,6 @@ public class LocalizationByStatusOfWebElements extends TestBaseSetUp {
     EnHomePage enHomePage;
 
     @BeforeMethod
-
     public void pageFactory() {
         startPage = new StartPage(driver);
         uaHomePage = new UaHomePage(driver);
@@ -28,7 +27,6 @@ public class LocalizationByStatusOfWebElements extends TestBaseSetUp {
 
     @Test
     public void testUaLangByStatusOfLangHeader() {
-
         startPage.open();
         startPage.selectUaLangVersion();
         String langHeaderActiveText = uaHomePage.findLangHeaderActiveText().getAttribute("innerHTML").toLowerCase();
@@ -42,9 +40,7 @@ public class LocalizationByStatusOfWebElements extends TestBaseSetUp {
         startPage.selectRuLangVersion();
         String langHeaderActiveText = ruHomePage.findLangHeaderActiveText().getAttribute("innerHTML").toLowerCase();
         assertEquals(langHeaderActiveText, "ru");
-
     }
-
 
     @Test
     public void testEnLangByStatusOfLangHeader() {
@@ -53,6 +49,4 @@ public class LocalizationByStatusOfWebElements extends TestBaseSetUp {
         String langHeaderActiveText = enHomePage.findLangHeaderActiveText().getAttribute("innerHTML").toLowerCase();
         assertEquals(langHeaderActiveText, "en");
     }
-
-
 }

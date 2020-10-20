@@ -1,0 +1,8 @@
+<suite name="PageMenuSelectionMatchesSelectPageTitle_testSuite">
+<test name="StaticGoodsMenu_test">
+    <classes>
+        <class name="test.java.tests.RuPageMenuSelectionMatchesSelectPageTitleTest"/>
+        <class name="test.java.tests.UaPageMenuSelectionMatchesSelectPageTitleTest"/>
+    </classes>
+</test>
+</suite>
