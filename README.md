@@ -17,7 +17,7 @@ I've created this project with the purpose to demonstrate how I am proficient in
  ```PET-project/allure-report```
  ```index.html```
  
- Allure report example
+ **Allure report example**
  
  ![Screenshot](allure-report_example.png)
  
