@@ -19,8 +19,9 @@ I've created this project with the purpose to demonstrate how I am proficient in
  
  Allure report example
  
+ ![Screenshot](allure-report_example.png)
+ 
  **To run single tests please use the appropriate XML-files.** 
-
 
  To find out if Start menu can select correct web-site language version by finding keyword at page bottom text
 
