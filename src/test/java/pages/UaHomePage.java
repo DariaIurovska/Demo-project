@@ -1,5 +1,6 @@
 package test.java.pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,17 +20,20 @@ public class UaHomePage extends BasePage {
         this.driver = driver;
     }
 
+    @Step(value="UA-home page open")
     @Override
     public UaHomePage open() {
         driver.get(PropertyLoader.loadProperty("uaPageURL"));
         return this;
     }
 
+    @Step(value="UA-home page find active text in language button at header")
     public WebElement findLangHeaderActiveText() {
         wait.until(ExpectedConditions.elementToBeClickable(langHeaderBy));
         return driver.findElement(uaActiveLangBtnBy);
     }
 
+    @Step(value="UA-home page click Main menu")
     public UaHomePage selectMainMenu() {
         wait.until(ExpectedConditions.elementToBeClickable(mainMenuBtnBy));
         driver.findElement(mainMenuBtnBy).click();

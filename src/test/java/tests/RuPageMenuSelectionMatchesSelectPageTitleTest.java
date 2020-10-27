@@ -1,5 +1,6 @@
 package test.java.tests;
 
+import io.qameta.allure.*;
 import org.openqa.selenium.By;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -12,8 +13,8 @@ public class RuPageMenuSelectionMatchesSelectPageTitleTest extends TestBaseSetUp
     StartPage startPage;
     RuHomePage ruHomePage;
 
-    String sampleForSubMenuBtnLocator = "a[href='/catalog/*/']";
-    String sampleForPageTitleLocator = "//span/a[@href='/catalog/*/']";
+    final String sampleForSubMenuBtnLocator = "a[href='/catalog/*/']";
+    final String sampleForPageTitleLocator = "//span/a[@href='/catalog/*/']";
 
     @BeforeMethod
     public void pageFactory() {
@@ -21,6 +22,11 @@ public class RuPageMenuSelectionMatchesSelectPageTitleTest extends TestBaseSetUp
         ruHomePage = new RuHomePage(driver);
     }
 
+    @Epic("Web-site Main menu")
+    @Feature("Russian version web-site menu")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("In this test we will find out if language on the page which have been selected from russian menu consist russian page-title name")
+    @Story(value = "Choose static menu buttons")
     @Test(dataProvider = "subMenuGoodsStaticName")
     public void ruMenuGoodsStaticNameSelectMatchesPage(String subMenuNameAtLink) {
         startPage.open();

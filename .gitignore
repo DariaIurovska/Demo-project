@@ -2,7 +2,7 @@
 target/
 *.iml
 chromedriver
-
-
+allure-results/
+allure-report/
 # Mac OS specific files
 .DS_Store

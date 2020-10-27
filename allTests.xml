@@ -1,0 +1,26 @@
+<suite name="AllTestsFromPet-project">
+    <test name="LocalizationByText">
+        <parameter name="uaWord" value="український бренд"/>
+        <parameter name="ruWord" value="украинский бренд"/>
+        <parameter name="enWord" value="ukrainian brand"/>
+        <classes>
+            <class name="test.java.tests.LocalizationByText"/>
+        </classes>
+    </test>
+    <test name="LocalizationByColorOfActiveLangHeaderElement">
+        <classes>
+            <class name="test.java.tests.LocalizationByColorOfWebElements"/>
+        </classes>
+    </test>
+    <test name="LocalizationByStatusOfLangHeaderElement">
+        <classes>
+            <class name="test.java.tests.LocalizationByStatusOfWebElements"/>
+        </classes>
+    </test>
+    <test name="PageMainMenuSelectionMatchesPageTitle">
+        <classes>
+            <class name="test.java.tests.UaPageMenuSelectionMatchesSelectPageTitleTest"/>
+            <class name="test.java.tests.RuPageMenuSelectionMatchesSelectPageTitleTest"/>
+        </classes>
+    </test>
+</suite>

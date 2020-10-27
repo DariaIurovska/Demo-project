@@ -1,5 +1,6 @@
 package test.java.tests;
 
+import io.qameta.allure.*;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import test.java.pages.EnHomePage;
@@ -24,6 +25,11 @@ public class LocalizationByColorOfWebElements extends TestBaseSetUp {
         enHomePage = new EnHomePage(driver);
     }
 
+    @Epic("Web-site Start menu")
+    @Feature("Elements of Ukrainian web-site version")
+    @Severity(SeverityLevel.MINOR)
+    @Description("In this test we will find out if Start menu can select correct Ukrainian web-site version by checking active language-header element's color")
+    @Story(value = "Choose ukrainian language button")
     @Test
     public void testUaLangByColorOfLangHeader() {
         startPage.open();
@@ -34,6 +40,11 @@ public class LocalizationByColorOfWebElements extends TestBaseSetUp {
 
     }
 
+    @Epic("Web-site Start menu")
+    @Feature("Elements of Russian web-site version")
+    @Severity(SeverityLevel.MINOR)
+    @Description("In this test we will find out if Start menu can select correct Russian web-site version by checking active language-header element's color")
+    @Story(value = "Choose russian language button")
     @Test
     public void testRuLangByColorOfLangHeader() {
         startPage.open();
@@ -44,6 +55,11 @@ public class LocalizationByColorOfWebElements extends TestBaseSetUp {
 
     }
 
+    @Epic("Web-site Start menu")
+    @Feature("Elements of English web-site version")
+    @Severity(SeverityLevel.MINOR)
+    @Description("In this test we will find out if Start menu can select correct English web-site version by checking active language-header element's color")
+    @Story(value = "Choose english language button")
     @Test
     public void testEnLangByColorOfLangHeader() {
         startPage.open();

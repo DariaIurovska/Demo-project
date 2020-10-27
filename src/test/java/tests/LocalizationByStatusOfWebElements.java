@@ -1,5 +1,6 @@
 package test.java.tests;
 
+import io.qameta.allure.*;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -25,6 +26,11 @@ public class LocalizationByStatusOfWebElements extends TestBaseSetUp {
         enHomePage = new EnHomePage(driver);
     }
 
+    @Epic("Web-site Start menu")
+    @Feature("Elements of Ukrainian web-site version")
+    @Severity(SeverityLevel.MINOR)
+    @Description("In this test we will find out if Start menu can select correct Ukrainian web-site version by checking status of UA language-header element")
+    @Story(value = "Choose ukrainian language button")
     @Test
     public void testUaLangByStatusOfLangHeader() {
         startPage.open();
@@ -33,6 +39,11 @@ public class LocalizationByStatusOfWebElements extends TestBaseSetUp {
         assertEquals(langHeaderActiveText, "ukr");
     }
 
+    @Epic("Web-site Start menu")
+    @Feature("Elements of Russian web-site version")
+    @Severity(SeverityLevel.MINOR)
+    @Description("In this test we will find out if Start menu can select correct Russian web-site version by checking status of RU language-header element")
+    @Story(value = "Choose russian language button")
     @Test
     public void testRuLangByStatusOfLangHeader() {
 
@@ -42,6 +53,11 @@ public class LocalizationByStatusOfWebElements extends TestBaseSetUp {
         assertEquals(langHeaderActiveText, "ru");
     }
 
+    @Epic("Web-site Start menu")
+    @Feature("Elements of English web-site version")
+    @Severity(SeverityLevel.MINOR)
+    @Description("In this test we will find out if Start menu can select correct English web-site version by checking status of EN language-header element")
+    @Story(value = "Choose english language button")
     @Test
     public void testEnLangByStatusOfLangHeader() {
         startPage.open();
