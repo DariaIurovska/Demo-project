@@ -1,4 +1,4 @@
-# PET-project
+# Demo-project
 
 I've created this project with the purpose to demonstrate how I am proficient in technologies and automated testing tools.
  
